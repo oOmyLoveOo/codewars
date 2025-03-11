@@ -17,7 +17,7 @@ function ipToNum(ip) {
            (octets[1] * Math.pow(256, 2)) + 
            (octets[2] * Math.pow(256, 1)) + 
            (octets[3] * Math.pow(256, 0));
-  }
+}
 
   function ipsBetween(start, end) {
     let startNum = ipToNum(start);
@@ -28,4 +28,9 @@ function ipToNum(ip) {
     }
     // Return the difference between the two IPs
     return endNum - startNum;
-  }
+}
+
+// example of usage
+let start = prompt("Enter the start IP address: ");
+let end = prompt("Enter the end IP address: ");
+alert(ipsBetween(start, end));
